@@ -13,6 +13,8 @@
 		0F5908D627F3B790007E94D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F5908D427F3B790007E94D2 /* Main.storyboard */; };
 		0F5908D827F3B796007E94D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F5908D727F3B796007E94D2 /* Assets.xcassets */; };
 		0F5908DB27F3B796007E94D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F5908D927F3B796007E94D2 /* LaunchScreen.storyboard */; };
+		0F5908EB27F3BBAA007E94D2 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5908E427F3BB2F007E94D2 /* libsqlite3.0.tbd */; };
+		0F5908EC27F3BBAA007E94D2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5908E527F3BB2F007E94D2 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		0F5908D727F3B796007E94D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F5908DA27F3B796007E94D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F5908DC27F3B796007E94D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F5908E427F3BB2F007E94D2 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		0F5908E527F3BB2F007E94D2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F5908EC27F3BBAA007E94D2 /* libsqlite3.tbd in Frameworks */,
+				0F5908EB27F3BBAA007E94D2 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +48,7 @@
 			children = (
 				0F5908CD27F3B790007E94D2 /* grannySmithWorkoutBuddy */,
 				0F5908CC27F3B790007E94D2 /* Products */,
+				0F5908E327F3BB2F007E94D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +63,56 @@
 		0F5908CD27F3B790007E94D2 /* grannySmithWorkoutBuddy */ = {
 			isa = PBXGroup;
 			children = (
-				0F5908CE27F3B790007E94D2 /* AppDelegate.swift */,
-				0F5908D027F3B790007E94D2 /* SceneDelegate.swift */,
-				0F5908D227F3B790007E94D2 /* ViewController.swift */,
-				0F5908D427F3B790007E94D2 /* Main.storyboard */,
-				0F5908D727F3B796007E94D2 /* Assets.xcassets */,
-				0F5908D927F3B796007E94D2 /* LaunchScreen.storyboard */,
+				0F5908EA27F3BB8A007E94D2 /* Image */,
+				0F5908E927F3BB7A007E94D2 /* Storyboard */,
+				0F5908E827F3BB4E007E94D2 /* View Controllers */,
+				0F5908E727F3BB45007E94D2 /* Classes */,
 				0F5908DC27F3B796007E94D2 /* Info.plist */,
 			);
 			path = grannySmithWorkoutBuddy;
+			sourceTree = "<group>";
+		};
+		0F5908E327F3BB2F007E94D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F5908E427F3BB2F007E94D2 /* libsqlite3.0.tbd */,
+				0F5908E527F3BB2F007E94D2 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0F5908E727F3BB45007E94D2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0F5908D027F3B790007E94D2 /* SceneDelegate.swift */,
+				0F5908CE27F3B790007E94D2 /* AppDelegate.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0F5908E827F3BB4E007E94D2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0F5908D227F3B790007E94D2 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		0F5908E927F3BB7A007E94D2 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0F5908D927F3B796007E94D2 /* LaunchScreen.storyboard */,
+				0F5908D427F3B790007E94D2 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		0F5908EA27F3BB8A007E94D2 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				0F5908D727F3B796007E94D2 /* Assets.xcassets */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
