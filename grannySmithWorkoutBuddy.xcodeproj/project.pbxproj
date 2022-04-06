@@ -18,6 +18,7 @@
 		0F5908EC27F3BBAA007E94D2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5908E527F3BB2F007E94D2 /* libsqlite3.tbd */; };
 		0F5908F627F3E312007E94D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5908F527F3E312007E94D2 /* ProfileViewController.swift */; };
 		0F5908F927F3E33B007E94D2 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5908F827F3E33B007E94D2 /* WeightViewController.swift */; };
+		E6B32A4E27FDF03B00EAF99C /* ProjectTest.db in Resources */ = {isa = PBXBuildFile; fileRef = E6B32A4D27FDF03B00EAF99C /* ProjectTest.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		0F5908E527F3BB2F007E94D2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		0F5908F527F3E312007E94D2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0F5908F827F3E33B007E94D2 /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
+		E6B32A4D27FDF03B00EAF99C /* ProjectTest.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = ProjectTest.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		0F5908CD27F3B790007E94D2 /* grannySmithWorkoutBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				E6B32A4C27FDF02E00EAF99C /* Database */,
 				0F5908EA27F3BB8A007E94D2 /* Image */,
 				0F5908E927F3BB7A007E94D2 /* Storyboard */,
 				0F5908E827F3BB4E007E94D2 /* View Controllers */,
@@ -122,6 +125,14 @@
 				0F5908D727F3B796007E94D2 /* Assets.xcassets */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		E6B32A4C27FDF02E00EAF99C /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				E6B32A4D27FDF03B00EAF99C /* ProjectTest.db */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F5908DB27F3B796007E94D2 /* LaunchScreen.storyboard in Resources */,
+				E6B32A4E27FDF03B00EAF99C /* ProjectTest.db in Resources */,
 				0F5908D827F3B796007E94D2 /* Assets.xcassets in Resources */,
 				0F5908D627F3B790007E94D2 /* Main.storyboard in Resources */,
 			);
