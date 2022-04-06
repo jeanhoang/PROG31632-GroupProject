@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F4F833A27FDE1140069903F /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F833927FDE1140069903F /* ExerciseViewController.swift */; };
 		0F5908CF27F3B790007E94D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5908CE27F3B790007E94D2 /* AppDelegate.swift */; };
 		0F5908D127F3B790007E94D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5908D027F3B790007E94D2 /* SceneDelegate.swift */; };
 		0F5908D327F3B790007E94D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5908D227F3B790007E94D2 /* ViewController.swift */; };
@@ -15,14 +16,12 @@
 		0F5908DB27F3B796007E94D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F5908D927F3B796007E94D2 /* LaunchScreen.storyboard */; };
 		0F5908EB27F3BBAA007E94D2 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5908E427F3BB2F007E94D2 /* libsqlite3.0.tbd */; };
 		0F5908EC27F3BBAA007E94D2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5908E527F3BB2F007E94D2 /* libsqlite3.tbd */; };
-		0F5908F027F3E29F007E94D2 /* WorkoutPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5908EF27F3E29F007E94D2 /* WorkoutPlanViewController.swift */; };
-		0F5908F327F3E2BB007E94D2 /* CreateWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5908F227F3E2BB007E94D2 /* CreateWorkoutViewController.swift */; };
 		0F5908F627F3E312007E94D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5908F527F3E312007E94D2 /* ProfileViewController.swift */; };
 		0F5908F927F3E33B007E94D2 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5908F827F3E33B007E94D2 /* WeightViewController.swift */; };
-		0F59090027F3E3CF007E94D2 /* UserWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5908FF27F3E3CF007E94D2 /* UserWorkoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F4F833927FDE1140069903F /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		0F5908CB27F3B790007E94D2 /* grannySmithWorkoutBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grannySmithWorkoutBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5908CE27F3B790007E94D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F5908D027F3B790007E94D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,11 +32,8 @@
 		0F5908DC27F3B796007E94D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F5908E427F3BB2F007E94D2 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		0F5908E527F3BB2F007E94D2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		0F5908EF27F3E29F007E94D2 /* WorkoutPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlanViewController.swift; sourceTree = "<group>"; };
-		0F5908F227F3E2BB007E94D2 /* CreateWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkoutViewController.swift; sourceTree = "<group>"; };
 		0F5908F527F3E312007E94D2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0F5908F827F3E33B007E94D2 /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
-		0F5908FF27F3E3CF007E94D2 /* UserWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWorkoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				0F5908D227F3B790007E94D2 /* ViewController.swift */,
-				0F5908EF27F3E29F007E94D2 /* WorkoutPlanViewController.swift */,
-				0F5908F227F3E2BB007E94D2 /* CreateWorkoutViewController.swift */,
 				0F5908F527F3E312007E94D2 /* ProfileViewController.swift */,
 				0F5908F827F3E33B007E94D2 /* WeightViewController.swift */,
-				0F5908FF27F3E3CF007E94D2 /* UserWorkoutViewController.swift */,
+				0F4F833927FDE1140069903F /* ExerciseViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -203,11 +197,9 @@
 				0F5908F627F3E312007E94D2 /* ProfileViewController.swift in Sources */,
 				0F5908D327F3B790007E94D2 /* ViewController.swift in Sources */,
 				0F5908CF27F3B790007E94D2 /* AppDelegate.swift in Sources */,
-				0F59090027F3E3CF007E94D2 /* UserWorkoutViewController.swift in Sources */,
-				0F5908F327F3E2BB007E94D2 /* CreateWorkoutViewController.swift in Sources */,
 				0F5908D127F3B790007E94D2 /* SceneDelegate.swift in Sources */,
+				0F4F833A27FDE1140069903F /* ExerciseViewController.swift in Sources */,
 				0F5908F927F3E33B007E94D2 /* WeightViewController.swift in Sources */,
-				0F5908F027F3E29F007E94D2 /* WorkoutPlanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
