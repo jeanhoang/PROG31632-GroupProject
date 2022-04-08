@@ -9,11 +9,23 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    let mainDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    @IBOutlet var lbName: UILabel!
+    @IBOutlet var lbGoal: UILabel!
+    @IBOutlet var lbFitness : UILabel!
+    @IBOutlet var imgAvatar : UIImageView!
+    
     @IBAction func unwindToProfileViewController(sender:UIStoryboardSegue) {}
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      
+        mainDelegate.readUserDataFromDatabase()
+        lbName.text = mainDelegate.people[0].username
+        lbGoal.text = mainDelegate.people[0].goal
+        lbFitness.text = mainDelegate.people[0].fitness
+        imgAvatar.image = UIImage(named: mainDelegate.people[0].avatar!)
         // Do any additional setup after loading the view.
     }
     
