@@ -11,13 +11,14 @@ import SQLite3
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var databaseName : String? = "data.db"
+    var databaseName : String? = "MyDatabase.db"
     var databasePath : String?
   
     var avatarOptions : [String] = ["avatar1.png","avatar2.png","avatar3.png"]
   
      
     var people : [User] = []
+    var userWeight: [Weight] = []
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -44,6 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return
         }
     
+    //Read user
     func readUserDataFromDatabase(){
         people.removeAll()
         
@@ -87,6 +89,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    
+    //Edit user
     func editUserIntoDatabase(person :User)-> Bool{
         
         var db : OpaquePointer? = nil
@@ -123,10 +127,99 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sqlite3_close(db)
             
         }else{
-            print("unable to open dataabase")
+            print("unable to open database")
             returnCode = false
         }
    return returnCode
+    }
+    
+    //Read weight from DB
+    func readWeightFromDatabase() {
+        userWeight.removeAll()
+        
+        var db : OpaquePointer? = nil
+        
+        if sqlite3_open(self.databasePath, &db) == SQLITE_OK {
+            
+            print("Successfully open connection to database at \(self.databasePath)")
+            
+            var queryStatement : OpaquePointer? = nil
+            var queryStatementString : String = "select * from weight"
+            
+            if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+                
+                while sqlite3_step(queryStatement) == SQLITE_ROW {
+                    
+                    let id : Int = Int(sqlite3_column_int(queryStatement, 0))
+                    let mass : Int = Int(sqlite3_column_int(queryStatement, 1))
+                    let cdate = sqlite3_column_text(queryStatement, 2)
+                    
+                    let date = String(cString : cdate!)
+                    
+                    let data : Weight = Weight.init()
+                    data.initWithData(theRow: id, theWeight: mass, theDate: date)
+                    
+                    userWeight.append(data)
+                    
+                    print("Query result")
+                    print("\(id) | \(mass) | \(date)")
+                    
+                }
+                
+                //Flush data
+                sqlite3_finalize(queryStatement)
+                
+            } else {
+                print ("Select statement could not be prepared")
+            }
+            
+            //Close db
+            sqlite3_close(db)
+            
+        } else {
+            print("Unable to open database")
+        }
+        
+    }
+    
+    //Insert weight into database
+    func insertWeightintoDatabase(userWeight: Weight) -> Bool {
+        var db : OpaquePointer? = nil
+        var returnCode : Bool = true
+        
+        if sqlite3_open(self.databasePath, &db) == SQLITE_OK {
+            
+            var insertStatement : OpaquePointer? = nil
+            var insertStatementString : String = "insert into weight values(NULL, ?, ?)"
+            
+            if sqlite3_prepare_v2(db, insertStatementString, -1, &insertStatement, nil) == SQLITE_OK {
+                
+                let weightInt = userWeight.weight! as NSNumber
+                let dateString = userWeight.date! as NSString
+                
+                sqlite3_bind_int(insertStatement, 1, Int32(truncating: weightInt))
+                sqlite3_bind_text(insertStatement, 2, dateString.utf8String, -1, nil)
+                
+                if sqlite3_step(insertStatement) == SQLITE_DONE {
+                    let rowID = sqlite3_last_insert_rowid(db)
+                    print("Inserted successfully row \(rowID)")
+                } else {
+                    print("Cold not insert row")
+                    returnCode = false
+                }
+                sqlite3_finalize(insertStatement)
+            } else {
+                print("Insert statement could not be done")
+                returnCode = false
+            }
+            sqlite3_close(db)
+            
+        } else {
+            print("Unable to open database")
+            returnCode = false
+        }
+        
+        return returnCode
     }
     
 

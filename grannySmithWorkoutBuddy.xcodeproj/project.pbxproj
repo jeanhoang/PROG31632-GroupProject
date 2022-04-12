@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F4A99952804E4DC00C57B30 /* MyDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = 0F4A99942804E4DC00C57B30 /* MyDatabase.db */; };
+		0F4A999A28050B5F00C57B30 /* ViewWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4A999928050B5F00C57B30 /* ViewWeightViewController.swift */; };
 		0F4F833A27FDE1140069903F /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F833927FDE1140069903F /* ExerciseViewController.swift */; };
 		0F5908CF27F3B790007E94D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5908CE27F3B790007E94D2 /* AppDelegate.swift */; };
 		0F5908D127F3B790007E94D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5908D027F3B790007E94D2 /* SceneDelegate.swift */; };
@@ -17,6 +19,9 @@
 		0F5908EC27F3BBAA007E94D2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5908E527F3BB2F007E94D2 /* libsqlite3.tbd */; };
 		0F5908F627F3E312007E94D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5908F527F3E312007E94D2 /* ProfileViewController.swift */; };
 		0F5908F927F3E33B007E94D2 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5908F827F3E33B007E94D2 /* WeightViewController.swift */; };
+		0FBF99752803A7AC00628016 /* WeightLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBF99742803A7AC00628016 /* WeightLogViewController.swift */; };
+		0FBF99782803A9BF00628016 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBF99772803A9BF00628016 /* Weight.swift */; };
+		0FBF99832803AF2C00628016 /* WeightSiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBF99822803AF2C00628016 /* WeightSiteCell.swift */; };
 		2EA2871C27FE5BEA00067FF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EA2871B27FE5BEA00067FF2 /* Main.storyboard */; };
 		2EA2871E27FE5C4100067FF2 /* avatar2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA2871D27FE5C4100067FF2 /* avatar2.png */; };
 		2EA2872027FE5C4900067FF2 /* avatar3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA2871F27FE5C4900067FF2 /* avatar3.png */; };
@@ -30,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F4A99942804E4DC00C57B30 /* MyDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyDatabase.db; sourceTree = "<group>"; };
+		0F4A999928050B5F00C57B30 /* ViewWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWeightViewController.swift; sourceTree = "<group>"; };
 		0F4F833927FDE1140069903F /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		0F5908CB27F3B790007E94D2 /* grannySmithWorkoutBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grannySmithWorkoutBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5908CE27F3B790007E94D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +49,9 @@
 		0F5908E527F3BB2F007E94D2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		0F5908F527F3E312007E94D2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0F5908F827F3E33B007E94D2 /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
+		0FBF99742803A7AC00628016 /* WeightLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightLogViewController.swift; sourceTree = "<group>"; };
+		0FBF99772803A9BF00628016 /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
+		0FBF99822803AF2C00628016 /* WeightSiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightSiteCell.swift; sourceTree = "<group>"; };
 		2EA2871B27FE5BEA00067FF2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2EA2871D27FE5C4100067FF2 /* avatar2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar2.png; sourceTree = "<group>"; };
 		2EA2871F27FE5C4900067FF2 /* avatar3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar3.png; sourceTree = "<group>"; };
@@ -113,6 +123,8 @@
 				0F5908D027F3B790007E94D2 /* SceneDelegate.swift */,
 				0F5908CE27F3B790007E94D2 /* AppDelegate.swift */,
 				2EA2872327FE5CBB00067FF2 /* User.swift */,
+				0FBF99772803A9BF00628016 /* Weight.swift */,
+				0FBF99822803AF2C00628016 /* WeightSiteCell.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -126,6 +138,8 @@
 				0F4F833927FDE1140069903F /* ExerciseViewController.swift */,
 				2EA2872927FE681500067FF2 /* EditProfileViewController.swift */,
 				2EA2874927FF227E00067FF2 /* ScheduleViewController.swift */,
+				0FBF99742803A7AC00628016 /* WeightLogViewController.swift */,
+				0F4A999928050B5F00C57B30 /* ViewWeightViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -162,7 +176,7 @@
 		E6B32A4C27FDF02E00EAF99C /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				E6B32A4D27FDF03B00EAF99C /* ProjectTest.db */,
+				0F4A99942804E4DC00C57B30 /* MyDatabase.db */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -230,6 +244,7 @@
 				2EA2872027FE5C4900067FF2 /* avatar3.png in Resources */,
 				2EA2872227FE5C6900067FF2 /* avatar1.png in Resources */,
 				2EA2872C27FE78D600067FF2 /* animation1.png in Resources */,
+				0F4A99952804E4DC00C57B30 /* MyDatabase.db in Resources */,
 				0F5908D827F3B796007E94D2 /* Assets.xcassets in Resources */,
 				2EA2871E27FE5C4100067FF2 /* avatar2.png in Resources */,
 				2EA2871C27FE5BEA00067FF2 /* Main.storyboard in Resources */,
@@ -244,11 +259,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EA2872A27FE681500067FF2 /* EditProfileViewController.swift in Sources */,
+				0FBF99782803A9BF00628016 /* Weight.swift in Sources */,
+				0F4A999A28050B5F00C57B30 /* ViewWeightViewController.swift in Sources */,
+				0FBF99752803A7AC00628016 /* WeightLogViewController.swift in Sources */,
 				0F5908F627F3E312007E94D2 /* ProfileViewController.swift in Sources */,
 				0F5908D327F3B790007E94D2 /* ViewController.swift in Sources */,
 				0F5908CF27F3B790007E94D2 /* AppDelegate.swift in Sources */,
 				2EA2874A27FF227E00067FF2 /* ScheduleViewController.swift in Sources */,
 				0F5908D127F3B790007E94D2 /* SceneDelegate.swift in Sources */,
+				0FBF99832803AF2C00628016 /* WeightSiteCell.swift in Sources */,
 				0F4F833A27FDE1140069903F /* ExerciseViewController.swift in Sources */,
 				0F5908F927F3E33B007E94D2 /* WeightViewController.swift in Sources */,
 				2EA2872427FE5CBB00067FF2 /* User.swift in Sources */,
