@@ -11,14 +11,16 @@ import SQLite3
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var databaseName : String? = "MyDatabase.db"
+    var databaseName : String? = "Database2.db"
     var databasePath : String?
   
     var avatarOptions : [String] = ["avatar1.png","avatar2.png","avatar3.png"]
+    var selectedURL : String = ""
   
      
     var people : [User] = []
     var userWeight: [Weight] = []
+    var exercises : [Exercise] = []
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -54,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Successfully opened connection to database at \(self.databasePath)")
             
             var queryStatement : OpaquePointer? = nil
-            var queryStatementString : String = "select * from user"
+            let queryStatementString : String = "select * from user"
             
             if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK{
                 while sqlite3_step(queryStatement) == SQLITE_ROW{
@@ -144,7 +146,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Successfully open connection to database at \(self.databasePath)")
             
             var queryStatement : OpaquePointer? = nil
-            var queryStatementString : String = "select * from weight"
+            let queryStatementString : String = "select * from weight"
             
             if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
                 
@@ -220,6 +222,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         return returnCode
+    }
+    
+    //read exercise from database
+    func readExerciseFromDatabase() {
+        exercises.removeAll()
+        var db : OpaquePointer? = nil
+        if sqlite3_open(self.databasePath, &db) == SQLITE_OK {
+            
+            var queryStatement : OpaquePointer? = nil
+            let queryStatementString : String = "select * from exercise"
+            
+            if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+                while sqlite3_step(queryStatement) == SQLITE_ROW {
+                    let id : Int = Int(sqlite3_column_int(queryStatement, 0))
+                    let cname = sqlite3_column_text(queryStatement, 1)
+                    let cmuscle = sqlite3_column_text(queryStatement, 2)
+                    let cweb = sqlite3_column_text(queryStatement, 3)
+                    
+                    let name = String(cString: cname!)
+                    let muscle = String(cString: cmuscle!)
+                    let web = String(cString: cweb!)
+                    
+                    let data : Exercise = Exercise.init()
+                    data.initWithData(theRow: id, theName: name, theMuscle: muscle, theWeb: web)
+                    exercises.append(data)
+                }
+                sqlite3_finalize(queryStatement)
+            }
+            sqlite3_close(db)
+        }
     }
     
 

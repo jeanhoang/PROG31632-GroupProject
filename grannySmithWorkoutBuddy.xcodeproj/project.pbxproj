@@ -31,6 +31,10 @@
 		2EA2872C27FE78D600067FF2 /* animation1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA2872B27FE78D600067FF2 /* animation1.png */; };
 		2EA2874A27FF227E00067FF2 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA2874927FF227E00067FF2 /* ScheduleViewController.swift */; };
 		3B1CB0D4280473ED0011ED8E /* backgroundmusic.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3B1CB0D3280473ED0011ED8E /* backgroundmusic.m4a */; };
+		E6F5D16D2808943200CD9A56 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F5D16C2808943200CD9A56 /* Exercise.swift */; };
+		E6F5D16F2808999800CD9A56 /* Database2.db in Resources */ = {isa = PBXBuildFile; fileRef = E6F5D16E2808999800CD9A56 /* Database2.db */; };
+		E6F5D1712808A46300CD9A56 /* ExerciseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F5D1702808A46300CD9A56 /* ExerciseWebViewController.swift */; };
+		E6F5D1732808B31700CD9A56 /* ExerciseSiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F5D1722808B31700CD9A56 /* ExerciseSiteCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +64,10 @@
 		2EA2872B27FE78D600067FF2 /* animation1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animation1.png; sourceTree = "<group>"; };
 		2EA2874927FF227E00067FF2 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		3B1CB0D3280473ED0011ED8E /* backgroundmusic.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = backgroundmusic.m4a; sourceTree = "<group>"; };
+		E6F5D16C2808943200CD9A56 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		E6F5D16E2808999800CD9A56 /* Database2.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Database2.db; sourceTree = "<group>"; };
+		E6F5D1702808A46300CD9A56 /* ExerciseWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseWebViewController.swift; sourceTree = "<group>"; };
+		E6F5D1722808B31700CD9A56 /* ExerciseSiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseSiteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +131,8 @@
 				2EA2872327FE5CBB00067FF2 /* User.swift */,
 				0FBF99772803A9BF00628016 /* Weight.swift */,
 				0FBF99822803AF2C00628016 /* WeightSiteCell.swift */,
+				E6F5D16C2808943200CD9A56 /* Exercise.swift */,
+				E6F5D1722808B31700CD9A56 /* ExerciseSiteCell.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -138,6 +148,7 @@
 				2EA2874927FF227E00067FF2 /* ScheduleViewController.swift */,
 				0FBF99742803A7AC00628016 /* WeightLogViewController.swift */,
 				0F4A999928050B5F00C57B30 /* ViewWeightViewController.swift */,
+				E6F5D1702808A46300CD9A56 /* ExerciseWebViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -174,6 +185,7 @@
 		E6B32A4C27FDF02E00EAF99C /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				E6F5D16E2808999800CD9A56 /* Database2.db */,
 				0F4A99A828051BB800C57B30 /* ProjectTest.db */,
 			);
 			path = Database;
@@ -243,6 +255,7 @@
 				2EA2872C27FE78D600067FF2 /* animation1.png in Resources */,
 				0F4A99A928051BB900C57B30 /* ProjectTest.db in Resources */,
 				0F5908D827F3B796007E94D2 /* Assets.xcassets in Resources */,
+				E6F5D16F2808999800CD9A56 /* Database2.db in Resources */,
 				2EA2871E27FE5C4100067FF2 /* avatar2.png in Resources */,
 				2EA2871C27FE5BEA00067FF2 /* Main.storyboard in Resources */,
 			);
@@ -260,6 +273,7 @@
 				0F4A999A28050B5F00C57B30 /* ViewWeightViewController.swift in Sources */,
 				0FBF99752803A7AC00628016 /* WeightLogViewController.swift in Sources */,
 				0F5908F627F3E312007E94D2 /* ProfileViewController.swift in Sources */,
+				E6F5D16D2808943200CD9A56 /* Exercise.swift in Sources */,
 				0F5908D327F3B790007E94D2 /* ViewController.swift in Sources */,
 				0F5908CF27F3B790007E94D2 /* AppDelegate.swift in Sources */,
 				2EA2874A27FF227E00067FF2 /* ScheduleViewController.swift in Sources */,
@@ -268,6 +282,8 @@
 				0F4F833A27FDE1140069903F /* ExerciseViewController.swift in Sources */,
 				0F5908F927F3E33B007E94D2 /* WeightViewController.swift in Sources */,
 				2EA2872427FE5CBB00067FF2 /* User.swift in Sources */,
+				E6F5D1732808B31700CD9A56 /* ExerciseSiteCell.swift in Sources */,
+				E6F5D1712808A46300CD9A56 /* ExerciseWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +423,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V39GH3P58B;
 				INFOPLIST_FILE = grannySmithWorkoutBuddy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -425,6 +442,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V39GH3P58B;
 				INFOPLIST_FILE = grannySmithWorkoutBuddy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
