@@ -11,24 +11,38 @@ class ViewWeightViewController: UIViewController {
     
     @IBOutlet var lblWeight : UILabel!
     @IBOutlet var lblDate : UILabel!
+    @IBOutlet var lblQuote : UILabel!
     
     var weightValue = ""
     var dateValue = ""
-    var text = ""
+    var motivation = ""
+    
+    //Populate motivational quotes
+    let quotes = ["Stop wishing, start doing",
+                  "Persistence is key",
+                  "Excuses don't burn calories"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //VC title
+        title = "View Weight"
+        
+        //Load chosen weight/date
         lblWeight.text = weightValue
         lblDate.text = dateValue
         
-        //text = weightValue + dateValue
-
+        //Load quote randomly
+        motivation = quotes.randomElement()!
+        lblQuote.text = motivation
+        
     }
     
+    
+    //Share quote
     @IBAction func shareWeight(_sender : UIButton) {
         
-        let textToShare = [weightValue]
+        let textToShare = [motivation]
         let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
         

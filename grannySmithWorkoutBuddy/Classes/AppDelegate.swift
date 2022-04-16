@@ -224,6 +224,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return returnCode
     }
     
+    //Delete a weight
+    func removeFromDatabase(id : Int){
+
+            var db : OpaquePointer? = nil
+
+            if sqlite3_open(self.databasePath, &db) == SQLITE_OK{
+
+                print("Successfully opened connection to database at \(self.databasePath)")
+                var deleteStatement : OpaquePointer? = nil
+                let deleteStatementString : String = "delete from weight where id=\(id)"
+                if sqlite3_prepare_v2(db, deleteStatementString, -1, &deleteStatement, nil) == SQLITE_OK{
+                    if sqlite3_step(deleteStatement) == SQLITE_DONE{
+                        print("Deleted")
+                    }
+                    else{
+                        print("Failed")
+                    }
+                }else{
+                    print("Couldn't prepare")
+                }
+                sqlite3_finalize(deleteStatement)
+
+                sqlite3_close(db)
+            }
+        }
+    
     //read exercise from database
     func readExerciseFromDatabase() {
         exercises.removeAll()

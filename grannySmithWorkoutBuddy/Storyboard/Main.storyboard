@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -304,7 +303,7 @@
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter today's weight" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tJk-ce-IUZ">
-                                <rect key="frame" x="20" y="166" width="374" height="34"/>
+                                <rect key="frame" x="20" y="166" width="332" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -329,6 +328,13 @@
                                 <color key="backgroundColor" red="0.18360089139999999" green="0.063394412580000004" blue="0.86867465099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="kg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ls-sg-3bx">
+                                <rect key="frame" x="373" y="172" width="21" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -367,11 +373,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Weight Log" id="1UB-cw-vrd">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="sLl-ka-wgm">
-                                            <connections>
-                                                <segue destination="dij-lg-365" kind="unwind" unwindAction="unwindToWeightViewControllerWithSender:" id="fy5-WH-9C9"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="sLl-ka-wgm"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -388,7 +390,14 @@
                         <viewLayoutGuide key="safeArea" id="7r2-Tb-Pc5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="VFC-cp-nxx"/>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="VFC-cp-nxx">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="U9x-rM-Osb"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="3VZ-K3-Tsb">
+                            <connections>
+                                <segue destination="dij-lg-365" kind="unwind" unwindAction="unwindToWeightViewControllerWithSender:" id="suE-u7-zd6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="Fvz-YQ-P31" kind="presentation" id="CRd-Ot-htJ"/>
                     </connections>
@@ -414,7 +423,7 @@
                                     <color key="textColor" red="0.2785387748" green="0.26424153309999998" blue="0.86867465099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Your Weight" id="W7k-N2-eys">
+                                    <navigationItem title="View Weight" id="W7k-N2-eys">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="mnD-kB-5gQ">
                                             <connections>
                                                 <segue destination="ea9-J9-3XC" kind="unwind" unwindAction="unwindToWeightLogViewControllerWithSender:" id="MUf-oK-Bdh"/>
@@ -424,14 +433,14 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Df-e2-vKG">
-                                <rect key="frame" x="110" y="105" width="195" height="155"/>
+                                <rect key="frame" x="133" y="113" width="148" height="124"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
                                 <color key="textColor" red="0.18360089139999999" green="0.063394412580000004" blue="0.86867465099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dW-Db-IE3">
-                                <rect key="frame" x="110" y="268" width="195" height="95"/>
+                                <rect key="frame" x="110" y="245" width="195" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -448,12 +457,27 @@
                                     <action selector="shareWeightWith_sender:" destination="Fvz-YQ-P31" eventType="touchUpInside" id="qZh-We-Vpu"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="kg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uef-is-Fhc">
+                                <rect key="frame" x="272" y="154" width="41" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quote" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieQ-Hz-ANS">
+                                <rect key="frame" x="3" y="340" width="408" height="183"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                <color key="textColor" red="0.2785387748" green="0.26424153309999998" blue="0.86867465099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xbM-e4-7D3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="lblDate" destination="3dW-Db-IE3" id="xdi-iS-k1g"/>
+                        <outlet property="lblQuote" destination="ieQ-Hz-ANS" id="iqV-7J-38N"/>
                         <outlet property="lblWeight" destination="0Df-e2-vKG" id="eIr-je-YiA"/>
                     </connections>
                 </viewController>
@@ -727,13 +751,16 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pe3-HM-9X8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <imageReference key="backIndicatorImage" image="chevron.left" catalog="system" symbolScale="large" renderingMode="original"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="xTH-J6-s8c" kind="relationship" relationship="rootViewController" id="PEx-KO-A0X"/>
+                        <segue destination="DL1-c7-ANe" kind="unwind" unwindAction="unwindToWeightViewControllerWithSender:" id="PdP-sK-jbT"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQE-X9-nH8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="DL1-c7-ANe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1581.1594202898552" y="77.445652173913047"/>
         </scene>
@@ -745,6 +772,7 @@
         <image name="avatar1.png" width="144" height="144"/>
         <image name="avatar2.png" width="144" height="144"/>
         <image name="avatar3.png" width="144" height="144"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="profile-icon" width="512" height="512"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
