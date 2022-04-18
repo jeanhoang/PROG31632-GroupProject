@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    //check database
+    //check database 
     func checkAndCreateDatabase(){
             var success = false
             let fileManager = FileManager.default
@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return
         }
     
-    //Read user
+    //Read user - By Haomin
     func readUserDataFromDatabase(){
         people.removeAll()
         
@@ -93,7 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    //Edit user
+    //Edit user - by Haomin
     func editUserIntoDatabase(person :User)-> Bool{
         
         var db : OpaquePointer? = nil
@@ -136,7 +136,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    return returnCode
     }
     
-    //Read weight from DB
+    //Read weight from DB - By Jean
     func readWeightFromDatabase() {
         userWeight.removeAll()
         
@@ -185,7 +185,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
-    //Insert weight into database
+    //Insert weight into database - By Jean
     func insertWeightintoDatabase(userWeight: Weight) -> Bool {
         var db : OpaquePointer? = nil
         var returnCode : Bool = true
@@ -225,7 +225,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return returnCode
     }
     
-    //Delete a weight
+    //Delete a weight - By Jean
     func removeFromDatabase(id : Int){
 
             var db : OpaquePointer? = nil
@@ -251,7 +251,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     
-    //read exercise from database
+    //read exercise from database - By Chris
     func readExerciseFromDatabase() {
         exercises.removeAll()
         var db : OpaquePointer? = nil
