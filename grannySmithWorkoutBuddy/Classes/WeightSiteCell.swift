@@ -12,6 +12,7 @@ class WeightSiteCell: UITableViewCell {
     let weightLabel = UILabel()
     let dateLabel = UILabel()
     
+    //Styling cells content
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     
         weightLabel.textAlignment = .right
@@ -33,6 +34,7 @@ class WeightSiteCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //Positioning cell content
     override func layoutSubviews() {
         weightLabel.frame = CGRect(x: 10, y: 10, width: 250, height: 30)
         dateLabel.frame = CGRect(x:10, y: 10, width: 250, height: 30)
