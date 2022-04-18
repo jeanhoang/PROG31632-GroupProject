@@ -2,26 +2,27 @@
 //  ProfileViewController.swift
 //  grannySmithWorkoutBuddy
 //
-//  Created by Jean Hoang on 2022-03-29.
+//  Created by Haomin Chen 2022-03-29.
 //
 
 import UIKit
 
 class ProfileViewController: UIViewController {
-    
+    // access to appdelegate
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBOutlet var lbName: UILabel!
     @IBOutlet var lbGoal: UILabel!
     @IBOutlet var lbFitness : UILabel!
     @IBOutlet var imgAvatar : UIImageView!
-    
+    //unwind to profile view controller
     @IBAction func unwindToProfileViewController(sender:UIStoryboardSegue) {}
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        // read user data from database
         mainDelegate.readUserDataFromDatabase()
+        //set user data to ui in the viewcontroller
         lbName.text = mainDelegate.people[0].username
         lbGoal.text = mainDelegate.people[0].goal
         lbFitness.text = mainDelegate.people[0].fitness

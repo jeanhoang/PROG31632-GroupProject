@@ -32,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    //check database
     func checkAndCreateDatabase(){
             var success = false
             let fileManager = FileManager.default

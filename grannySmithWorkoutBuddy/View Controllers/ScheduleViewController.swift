@@ -2,7 +2,7 @@
 //  ScheduleViewController.swift
 //  grannySmithWorkoutBuddy
 //
-//  Created by  on 2022-04-07.
+//  Created by HaominChen on 2022-04-07.
 //
 
 import UIKit
@@ -12,7 +12,7 @@ class ScheduleViewController: UIViewController, UITextFieldDelegate {
  
     @IBOutlet var tfReminder : UITextField!
     @IBOutlet var datePicker : UIDatePicker!
-    
+    //set variable notificationCenter
     let notificationCenter = UNUserNotificationCenter.current()
 
     override func viewDidLoad() {
@@ -25,31 +25,37 @@ class ScheduleViewController: UIViewController, UITextFieldDelegate {
             {
                 print("Permission Denied")
             }
-        }    }
+        }
+    }
+    
+    //keyborad will disappear when user finish data input
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return textField.resignFirstResponder()
     }
     
+    //handle schedule settings
     @IBAction func scheduleAction(sender : UIButton){
+        //setup notifications
         notificationCenter.getNotificationSettings { (settings) in
             
             DispatchQueue.main.async
             {
-             
                 let message = self.tfReminder.text!
                 let date = self.datePicker.date
-                
+                //check if user allows to send notification
                 if(settings.authorizationStatus == .authorized)
                 {
+                    //set notification content
                     let content = UNMutableNotificationContent()
                     content.title = "Gentle reminder for you"
                     content.body = message
                     
                     let dateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)
-                    
+                    //set trigger to compare now and scheduled time
                     let trigger = UNCalendarNotificationTrigger(dateMatching: dateComp, repeats: false)
+                    //add trigger to a request
                     let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-                    
+                    //give error if request add failed
                     self.notificationCenter.add(request) { (error) in
                         if(error != nil)
                         {
@@ -57,6 +63,7 @@ class ScheduleViewController: UIViewController, UITextFieldDelegate {
                             return
                         }
                     }
+                    //set alert window
                     let ac = UIAlertController(title: "Notification Scheduled", message: "At " + self.formattedDate(date: date), preferredStyle: .alert)
                     ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in}))
                     self.present(ac, animated: true)
@@ -65,9 +72,11 @@ class ScheduleViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //set date format
     func formattedDate(date: Date) -> String
     {
         let formatter = DateFormatter()
+        //set data format as date month year hour:minute
         formatter.dateFormat = "d MMM y HH:mm"
         return formatter.string(from: date)
     }
