@@ -11,7 +11,7 @@ import SQLite3
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var databaseName : String? = "Database2.db"
+    var databaseName : String? = "ProjectDatabase.db"
     var databasePath : String?
   
     var avatarOptions : [String] = ["avatar1.png","avatar2.png","avatar3.png"]

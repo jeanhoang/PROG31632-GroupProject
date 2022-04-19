@@ -1,9 +1,7 @@
-//
-//  Exercise.swift
-//  grannySmithWorkoutBuddy
-//
-//  Created by Christopher Lewis on 2022-04-14.
-//
+/*
+ Author: Christopher Lewis
+ This class is used for creating exercise objects based on the database entries. Each exercise has an auto generated ID, an exercise name, an associated muscle group, and a web link to a website with more information about the exercise
+ */
 
 import UIKit
 
