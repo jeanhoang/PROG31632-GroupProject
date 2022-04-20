@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WeightViewController: UIViewController {
+class WeightViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func unwindToWeightViewController(sender:UIStoryboardSegue) {}
     
@@ -19,8 +19,9 @@ class WeightViewController: UIViewController {
     
     //Get rid of keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        return textField.resignFirstResponder()
-    }
+            self.view.endEditing(true)
+            return false
+        }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch : UITouch = touches.first!
@@ -68,8 +69,20 @@ class WeightViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Looks for single or multiple taps.
+            let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
 
+           //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+           tap.cancelsTouchesInView = false
+
+           view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
+    }
+    
+    //Dismiss keyboard
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
 

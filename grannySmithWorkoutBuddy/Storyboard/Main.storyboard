@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -306,10 +305,10 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter today's weight" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tJk-ce-IUZ">
                                 <rect key="frame" x="20" y="166" width="332" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <nil key="textColor"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
                                 <connections>
-                                    <outlet property="delegate" destination="saG-dH-XCg" id="fmF-fd-PgT"/>
+                                    <outlet property="delegate" destination="saG-dH-XCg" id="8vu-ob-KSH"/>
                                 </connections>
                             </textField>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="riI-Bh-bJG">
@@ -767,7 +766,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4RM-VW-SPI"/>
+        <segue reference="fky-Ts-2Eb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="avatar1.png" width="144" height="144"/>
